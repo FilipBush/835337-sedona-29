@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: гостиницы Седоны</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
+    <link href="normalize.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -39,7 +42,21 @@
       <section>
         <h2>Параметры поиска гостиницы</h2>
         <form>
-          <!--Здесь будет форма с параметрами поиска гостиницы-->
+          <span>Инфраструктура:</span>
+          <input type="checkbox" name="waterpool" id="waterpool">
+          <label for="waterpool">Бассейн</label>
+          <input type="checkbox" name="parking" id="parking">
+          <label for="parking">Парковка</label>
+          <input type="checkbox" name="wi-fi" id="wi-fi">
+          <label for="wi-fi">wi-fi</label>
+          <span>Тип жилья:</span>
+          <input type="checkbox" name="hotel" id="hotel">
+          <label for="hotel">Гостиница</label>
+          <input type="checkbox" name="motel" id="motel">
+          <label for="motel">Мотель</label>
+          <input type="checkbox" name="apartments" id="apartments">
+          <label for="apartments">Апартаменты</label>
+          <!--Здесь будет модуль с параметрами стоимости гостиницы-->
         </form>
       </section>
 
@@ -54,33 +71,60 @@
 
       <section>
         <h2>Результаты поиска гостиницы</h2>
+        <div>
+          <span>Найдено:3</span>
+          <ul>
+            <span>Сортировка:</span>
+            <li>По цене</li>
+            <li>По типу</li>
+            <li>По рейтингу</li>
+          </ul>
+          <ul>
+            <li>По возрастанию</li>
+            <li>По убыванию</li>
+          </ul>
+        </div>
         <ul>
           <li>
             <img src="#" alt="Фото Amara resort & SPA">
-            <h3>Amara resort & SPA</h3>
-            <span>Гостиница</span>
-            <span>от 4000 Р.</span>
-            <span>Рейтинг: 8,5</span>
-            <button type="button">Подробнее</button>
-            <button type="button">Забронировать</button>
+            <div>
+              <h3>Amara resort & SPA</h3>
+              <span>Гостиница</span>
+              <span>от 4000 Р.</span>
+              <a href="#">Подробнее</a>
+              <a href="#">Забронировать</a>
+            </div>
+            <div>
+              <span>Рейтинг: 8,5</span>
+            </div>
           </li>
+
           <li>
             <img src="#" alt="Фото Desert Quail Inn">
-            <h3>Desert Quail Inn</h3>
-            <span>Мотель</span>
-            <span>от 3000 Р.</span>
-            <span>Рейтинг: 8,9</span>
-            <button type="button">Подробнее</button>
-            <button type="button">Забронировать</button>
+            <div>
+              <h3>Desert Quail Inn</h3>
+              <span>Мотель</span>
+              <span>от 3000 Р.</span>
+              <a href="#">Подробнее</a>
+              <a href="#">Забронировать</a>
+            </div>
+            <div>
+              <span>Рейтинг: 8,9</span>
+            </div>
           </li>
+
           <li>
             <img src="#" alt="Фото Villas at Poco Diablo">
-            <h3>Villas at Poco Diablo</h3>
-            <span>Апартаменты</span>
-            <span>от 2000 Р.</span>
-            <span>Рейтинг: 9,2</span>
-            <button type="button">Подробнее</button>
-            <button type="button">Забронировать</button>
+            <div>
+              <h3>Villas at Poco Diablo</h3>
+              <span>Апартаменты</span>
+              <span>от 2000 Р.</span>
+              <a href="#">Подробнее</a>
+              <a href="#">Забронировать</a>
+            </div>
+            <div>
+              <span>Рейтинг: 9,2</span>
+            </div>
           </li>
         </ul>
       </section>
