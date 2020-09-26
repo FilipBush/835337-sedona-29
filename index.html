@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
-    <link href="normalize.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
-    <header class="main-header">
+    <header class="main-header container">
       <a href="" class="main-header-logo">
         <img src="#" alt="Логотип City of Sedona">
       </a>
@@ -49,8 +49,8 @@
       </section>
 
       <section class="intro-to-features">
-        <h2 class="intro-to-features slogan">Седона - небольшой городок в Аризоне, который заслуживает большего!</h2>
-        <p class="intro-to-features intro">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        <h2 class="intro-to-features intro-slogan">Седона - небольшой городок в Аризоне, который заслуживает большего!</h2>
+        <p class="intro-to-features intro-text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
 
       <section class="features">
@@ -115,10 +115,10 @@
           Укажите предполагаемые даты поездки, <br>
           и мы покажем вам лучшие предложения гостиниц в седоне
         </p>
-        <a href="#">Поиск Гостиницы в Седоне</a>
+        <a class="search-menu-find" href="#">Поиск Гостиницы в Седоне</a>
         <div>
           <form>
-            <button class="button" type="submit" >Найти</button>
+            <button class="button button-find" type="submit" >Найти</button>
           </form>
         </div>
         <div>
@@ -127,7 +127,7 @@
       </section>
     </main>
 
-    <footer class="page-footer main-footer">
+    <footer class="main-footer container">
       <h2 class="visually-hidden">Контактная информация</h2>
       <div class="footer-contacts">
         <p>
@@ -135,17 +135,17 @@
           ТЕЛ. <a class="footer-phone" href="tel:+74956660166">+7(495) 666-01-66</a>
         </p>
       </div>
-        <ul class="footer-social">
-          <li>
-            <a class="social-button" href="#">Twitter</a>
-          </li>
-          <li>
-            <a class="social-button" href="#">Facebook</a>
-          </li>
-          <li>
-            <a class="social-button" href="#">Vkontakte</a>
-          </li>
-        </ul>
+      <ul class="footer-social">
+        <li>
+          <a class="social-button" href="#">Twitter</a>
+        </li>
+        <li>
+          <a class="social-button" href="#">Facebook</a>
+        </li>
+        <li>
+          <a class="social-button" href="#">Vkontakte</a>
+        </li>
+      </ul>
       <div class="footer-copyright">
         <p class="visually-hidden">Разработано:</p>
         <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss">Website by html academy</a>

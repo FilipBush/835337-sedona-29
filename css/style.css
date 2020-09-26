@@ -1,0 +1,274 @@
+/* Variables */
+
+:root {
+  --basic-white: #FFFFFF;
+  --basic-white-alpha-03: rgba(255, 255, 255, 0.3);
+  --basic-white-alpha-09: rgba(255, 255, 255, 0.9);
+  --basic-black: #000000;
+
+  --red: #FF0000;
+
+  --grey: #EEEEEE;
+
+  --blue: #81B3D2;
+  --blue-dark: #669EC0;
+  --blue-dark-extra: #5496BD;
+
+  --brown: #766357;
+  --brown-dark: #604E43;
+  --brown-dark-extra: #503E33;
+}
+
+/* Global */
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Main navigation */
+
+.main-navigation {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+/*User navigation*/
+
+.site-navigation a {
+  color: var(--basic-black)
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: var(--blue);
+}
+
+/* Banner */
+
+/* Intro to features */
+
+.intro-to-features {
+  text-align: center;
+}
+
+.intro-slogan {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.intro-text {
+  font-weight: normal;
+  line-height: 26px;
+}
+
+/* Features */
+
+.main-features-list,
+.sub-feature-list {
+  list-style: none;
+}
+
+.main-features-item,
+.sub-feature-item {
+  text-align: center;
+}
+
+.features-list h3 {
+  font-size: 21px;
+}
+
+.main-features-item {
+  background-color: var(--blue);
+  color: var(--basic-white);
+}
+
+.sub-features-item {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+}
+
+.grey-item {
+  background-color: var(--grey);
+  color: var(--basic-black);
+}
+
+/* Search menu */
+
+.search-menu {
+  text-align: center;
+}
+
+.search-menu span {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.search-menu p {
+  line-height: 24px;
+}
+
+.search-menu-find {
+  background-color: var(--brown);
+  color: var(--basic-white);
+  font-weight: 700;
+  padding: 20px;
+}
+
+.search-menu-find:hover {
+  background-color: var(--brown-dark);
+}
+
+.search-menu-find:active {
+  background-color: var(--brown-dark);
+  color: var(--basic-white-alpha-03);
+}
+
+.button-find {
+  text-transform: uppercase;
+  background-color: var(--blue);
+  color: var(--basic-white);
+  font-weight: 700;
+  padding: 10px;
+}
+
+.button-find:hover {
+  background-color: var(--blue-dark);
+}
+
+.button-find:active {
+  background-color: var(--blue-dark);
+  color: var(--basic-white-alpha-03);
+}
+
+/* Main footer */
+
+.main-footer {
+  color: var(--basic-black);
+  background-color: var(--basic-white-alpha-09);
+}
+
+.main-footer a {
+  color: var(--basic-black);
+  font-weight: 700;
+}
+
+.footer-contacts a:hover,
+.footer-contacts a:focus {
+  text-decoration: none;
+}
+
+.footer-contacts p {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/* Inner page */
+
+/* Filters */
+
+ .filters {
+  color: var(--basic-white);
+  background-color: var(--brown);
+ }
+
+ .filter-option {
+  list-style: none;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+ }
+
+ .filter legend {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+ }
+
+/* Sort by */
+
+.search-result-amount {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.sort-by-filters {
+  list-style: none;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sort-by-filters a {
+  color: var(--black);
+  opacity: 0.3;
+}
+.sort-by-filters a:hover {
+  color: var(--blue);
+  opacity: 1;
+}
+.sort-by-filters a:active {
+  color: var(--black)
+  opacity: 1;
+}
+
+/* Catalog */
+
+.item-info-detail {
+  background-color: var(--blue);
+  color: var(--basic-white);
+  font-weight: 700;
+  padding: 5px;
+}
+
+.item-info-detail:hover {
+  background-color: var(--blue-dark);
+}
+
+.item-info-detail:active {
+  background-color: var(--blue-dark);
+  color: var(--basic-white-alpha-03);
+}
+
+.item-booking {
+  background-color: var(--brown);
+  color: var(--basic-white);
+  font-weight: 700;
+  padding: 5px;
+}
+
+.item-booking:hover {
+  background-color: var(--brown-dark);
+}
+
+.item-booking:active {
+  background-color: var(--brown-dark);
+  color: var(--basic-white-alpha-03);
+}
