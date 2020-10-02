@@ -72,6 +72,10 @@ ul {
 
 /* Banner */
 
+.banner {
+   background-color: var(--brown-dark-extra);
+}
+
 /* Intro to features */
 
 .intro-to-features {
