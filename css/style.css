@@ -371,6 +371,7 @@ ul {
   background-color: var(--brown-dark);
 }
 
+
 .item-booking:active {
   background-color: var(--brown-dark);
   color: var(--basic-white-alpha-03);
