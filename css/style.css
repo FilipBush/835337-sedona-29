@@ -24,6 +24,7 @@
 body {
   min-width: 1200px;
   margin: 0;
+  padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
@@ -42,6 +43,7 @@ img {
   height: auto;
 }
 
+h2,
 ul {
   margin: 0;
   padding: 0;
@@ -58,19 +60,72 @@ ul {
   clip: rect(0 0 0 0)
 }
 
+/*Grid*/
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+/* Main header */
+/*для визулиализации гридов (убрать)*/
+.main-header {
+outline: 5px solid rgba(0, 255, 0, 0.7);
+outline-offset: -5px;
+}
+
 /* Main navigation */
 
 .main-navigation {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 1200px;
+  height: 56px;
+  margin: 0 auto;
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
+
+  outline: 5px solid rgba(0, 0, 100, 0.5);
+  outline-offset: -5px;
 }
+
+/* Main navigation_Logo */
+
+.main-header-logo {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  order: 1;
+  justify-self: center;
+
+  outline: 5px solid rgba(0, 100, 0, 0.5);
+  outline-offset: -5px;
+}
+
+/* Site navigation */
 
 .site-navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   list-style: none;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
 }
 
-/*User navigation*/
+.site-navigation li {
+  justify-self: center;
+}
 
 .site-navigation a {
   color: var(--basic-black)
@@ -81,24 +136,46 @@ ul {
   color: var(--blue);
 }
 
+/* Main */
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 /* Banner */
 
 .banner {
    background-image: url("../img/banner_background photo.jpg");
    background-repeat: no-repeat;
    background-position: center center;
+   height: 509px;
+   text-align: center;
+}
 
+.logo-layout-part {
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  background-position: center -56px;
+}
+
+.banner-phrase {
+  margin-top: 77.35px;
 }
 
 /* Intro to features */
 
-.intro-to-features {
+.intro-to-features-section {
+  height: 216px;
   text-align: center;
+  margin-top: 41.5px;
 }
 
 .intro-slogan {
   font-size: 21px;
   line-height: 26px;
+  text-align: center;
+  height: 80px;
 }
 
 .intro-text {
@@ -107,15 +184,102 @@ ul {
 }
 
 /* Features */
+.features {
+  margin-bottom: 0px;
+  outline: 5px solid rgba(255, 0, 0 , 0.3);
+}
 
 .main-features-list,
 .sub-feature-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
+.main-feature-list {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 586px 256px 256px;
+}
+
+.features-item-container-large {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 256px 330px;
+}
+
+h3,
+p {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.feature-background-1 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.sub-feature-list {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.sub-feature-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.features-item-container {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 256px;
+}
+
+.grey-item:nth-of-type(3) {
+  grid-column-start: 1;
+  grid-column-end: : 2;
+  grid-row-start: -2;
+  grid-row-start: -1;
+}
+
+.grey-item:nth-of-type(4) {
+  grid-column-start: 2;
+  grid-column-end: : 3;
+  grid-row-start: -2;
+  grid-row-start: -1;
+}
+
+.grey-item:nth-of-type(5) {
+  grid-column-start: 3;
+  grid-column-end: : 4;
+  grid-row-start: -2;
+  grid-row-start: -1;
+}
+
+
+
+
+
+
+
 .main-features-item,
-.sub-feature-item {
+.sub-features-item {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  outline: 5px solid rgba(0, 255, 255 , 0.3);
+  outline-offset: -5px;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
 }
 
 .features-list h3 {
@@ -130,6 +294,7 @@ ul {
 .sub-features-item {
   background-color: var(--basic-white);
   color: var(--basic-black);
+  height: 330px;
 }
 
 .grey-item {
@@ -233,7 +398,27 @@ ul {
 .main-footer {
   color: var(--basic-black);
   background-color: var(--basic-white-alpha-09);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
+
+.footer-contacts {
+  margin: 0;
+  width: 450px;
+  justify-self: center;
+}
+
+.footer-social {
+  width: 145px;
+  justify-self: center;
+}
+
+.footer-copyright {
+  max-width: 250px;
+  margin: 0;
+  justify-self: center;
+}
+
 
 .main-footer a {
   color: var(--basic-black);
