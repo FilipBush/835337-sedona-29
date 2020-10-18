@@ -631,30 +631,11 @@ outline-offset: -5px;
   line-height: 18px;
 }
 
-.sort-by-order {
-  display: block;
-}
-
-.low-to-high:before {
-  content: "";
-  background-image: url("../img/icon-up-dir.svg");
-  display: block;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 10px;
-  height: 11px;
-  margin: 0 auto;
-}
-
-.high-to-low:before {
-  content: "";
-  background-image: url("../img/icon-down-dir.svg");
-  display: block;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 10px;
-  height: 11px;
-  margin: 0 auto;
+.sort .sort-by-order {
+  display: flex;
+  min-width: 34px;
+  justify-content: space-between;
+  padding-top: 5px;
 }
 
 .sort-by-filters a {
