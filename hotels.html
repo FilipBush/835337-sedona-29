@@ -44,18 +44,18 @@
           <h2 class="visually-hidden">Параметры поиска гостиницы</h2>
           <form class="filter" method="get" action="#">
             <fieldset>
-              <legend class="infrastructure">Инфраструктура:</legend>
+              <legend>Инфраструктура:</legend>
               <ul>
                 <li class="filter-option filter-checkbox">
-                  <input type="checkbox" name="waterpool" id="waterpool">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="waterpool" id="waterpool">
                   <label for="waterpool">Бассейн</label>
                 </li>
                 <li class="filter-option filter-checkbox">
-                  <input type="checkbox" name="parking" id="parking">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="parking" id="parking">
                   <label for="parking">Парковка</label>
                 </li>
                 <li class="filter-option filter-checkbox">
-                  <input type="checkbox" name="wi-fi" id="wi-fi">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
                   <label for="wi-fi">wi-fi</label>
                 </li>
               </ul>
@@ -64,24 +64,44 @@
               <legend class="category">Тип жилья:</legend>
               <ul>
                 <li class="filter-option filter-checkbox">
-                  <input type="checkbox" name="hotel" id="hotel">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hotel" id="hotel">
                   <label for="hotel">Гостиница</label>
                 </li>
                 <li class="filter-option filter-checkbox">
-                  <input type="checkbox" name="motel" id="motel">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="motel" id="motel">
                   <label for="motel">Мотель</label>
                 </li>
                 <li class="filter-option filter-checkbox">
-                  <input type="checkbox" name="apartments" id="apartments">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="apartments" id="apartments">
                   <label for="apartments">Апартаменты</label>
                 </li>
               </ul>
-            <fieldset>
-            <!--Здесь будет модуль с параметрами стоимости гостиницы-->
-            <button type="submit" class="filter-button button">Показать</button>
+            </fieldset>
+
+
+            <fieldset class="filter-item">
+              <legend>Стоимость в сутки (Р):</legend>
+              <div class="range-filter">
+                <div class="price-controls">
+                  <label class="min-price">
+                    от <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">
+                    до <input type="number" name="max-price" value="3500">
+                  </label>
+                </div>
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <button type="submit" class="filter-button button">Показать</button>
+              </div>
+            </fieldset>
           </form>
         </section>
-
         <section class="sort-block">
           <h2 class="visually-hidden">Параметры сортировки результатов поиска</h2>
           <span class="search-result-amount">Найдено:3</span>

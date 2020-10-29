@@ -11,6 +11,7 @@
 
   --red: #FF0000;
 
+  --basic-grey: #ABABAB;
   --grey: #EEEEEE;
   --grey-extra: #BDBBBC;
   --grey-dark: #E5E5E5;
@@ -438,6 +439,10 @@ img {
   margin-bottom: 30px;
 }
 
+.search-form-item:last-of-type {
+  margin-bottom: 54px;
+}
+
 .date-input {
   width: 346px;
   margin: 0;
@@ -446,14 +451,18 @@ img {
   padding: 10px 37px 10px 13px;
 }
 
-.date-input::-webkit-input-placeholder,
-.amount-input::-webkit-input-placeholder {
-   color: var(--basic-black);
-   font-weight: 700;
-   line-height: 26px;
+.date-input,
+.amount-input,
+.date-input::placeholder,
+.amount-input::placeholder {
+  color: var(--basic-black);
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
  }
 
 .calendar-icon {
+  padding: 0;
   background-color: transparent;
   position: absolute;
   border: none;
@@ -485,23 +494,26 @@ img {
   background-color: var(--grey-light);
   padding: 10px 37px;
   text-align: center;
-
 }
 
 .amount-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   background-color: transparent;
   position: absolute;
   border: none;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .button-minus {
   right: 85px;
-  bottom: 15px;
 }
 
 .button-plus {
   right: 5px;
-  bottom: 12px;
 }
 
 .search-form-item:last-child {
@@ -535,136 +547,6 @@ img {
 .calendar-icon:active {
   color: var(--blue);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*  Форма на гридах
-
-.search-form {
-  display: grid;
-  grid-template-columns: 112px 114px 118px 114px;
-  align-items: baseline;
-  line-height: 26px;
-  font-weight: 700;
-  margin-bottom: 54px;
-  position: relative;
-}
-
-.search-form input {
-  padding: 6px 12px;
-  border: none;
-  height: 38px;
-  font: inherit;
-  line-height: 26px;
-  font-weight: 700;
-  background-color: var(--grey-light);
-  color: var(--basic-black);
-}
-
-.arrival-calendar,
-.departure-calendar {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  height: 23px;
-  width: 21px;
-  border: none;
-}
-
-.arrival-calendar {
-  right: 9px;
-  top: 7px;
-}
-
-.departure-calendar {
-  right: 9px;
-  top: 75px;
-}
-
-.search-form input::-webkit-input-placeholder {
-   color: var(--basic-black);
- }
-
-.amount::-webkit-input-placeholder {
-  text-align: center;
-}
-
-.arrival-date {
-  grid-column: 2 / -1;
-}
-
-.departure-date {
-  grid-column: 2 / -1;
-}
-
- .search-form label {
-  text-align: left;
- }
-
- .date {
-   margin-bottom: 30px;
- }
-
-.amount-label {
-  position: relative;
-}
-
-.children-button-minus,
-.adult-button-minus,
-.children-button-plus,
-.adult-button-plus {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-.children-button-minus,
-.adult-button-minus {
-  height: 3px;
-  width: 12px;
-}
-
-.children-button-plus,
-.adult-button-plus {
-  height: 11px;
-  width: 11px;
-}
-
-.children-button-minus {
-  right: 90px;
-  bottom: 26px;
-}
-
-.children-button-plus {
-  right: 12px;
-  bottom: 15px;
-}
-
-.adult-button-minus {
-  left: 123px;
-  bottom: 26px;
-}
-
-.adult-button-plus {
-  left: 204px;
-  bottom: 15px;
-} */
 
 .button-find {
   width: 458px;
@@ -798,9 +680,7 @@ img {
   color: var(--grey-extra);
 }
 
-
 /*   INNER PAGE   */
-
 /* Filters */
 
  .filters {
@@ -811,19 +691,200 @@ img {
   background-size: cover;
 }
 
- .filter-option {
-  list-style: none;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
- }
+.filter {
+  display: flex;
+  padding: 27px 72px;
+  padding-bottom: 14px;
+  justify-content: flex-start;
+}
 
- .filter legend {
+.filter fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  width: 253px;
+  padding-right: 15px;
+}
+
+.filter fieldset:nth-child(2n) {
+  margin-right: 232px;
+}
+
+.filter fieldset:nth-child(3n) {
+  width: 317px;
+  padding-right: 0;
+}
+
+.filter legend {
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
+  margin-bottom: 24px;
+}
+
+.filter ul {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+  list-style: none;
+}
+
+ .filter-option {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  padding-left: 40px;
+  margin-bottom: 23px;
  }
 
+ .filter-option label {
+   position: relative;
+   display: block;
+   user-select: none;
+ }
+
+.filter-input-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: -40px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:checked + label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: -40px;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+}
+
+.filter-item legend {
+  margin-bottom: 10px;
+}
+
+.range-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 317px;
+}
+
+.price-controls {
+  position: relative;
+  display: flex;
+  width: inherit;
+  justify-content: space-between;
+  border: 2px solid var(--basic-white);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.price-controls label {
+  text-transform: uppercase;
+  width: 50%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  font-family: inherit;
+  font-size: inherit;
+  width: 68px;
+  text-align: left;
+  color: var(--basic-white);
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.price-controls::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  background-color: var(--basic-white);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.range-controls {
+  width: inherit;
+  position: relative;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  height: 42px;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background-color: var(--basic-white-alpha-03);
+}
+
+.range-controls .bar {
+  width: 248px;
+  height: 2px;
+  background: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: var(--basic-grey);
+  border-radius: 50%;
+  box-shadow: 0 2px 0 0 var(--basic-grey);
+}
+
+.toggle:hover {
+  width: 23px;
+  height: 23px;
+}
+
+.range-controls .toggle-max {
+  left: 240px;
+}
+
+.filter-button {
+  color: var(--baxic-white);
+  text-transform: uppercase;
+  line-height: 21px;
+  font-size: 14px;
+  padding: 8px 36px;
+  background-color: transparent;
+  border: 2px solid var(--basic-white);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.filter-button:hover {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
 /* Sort by */
 
 .sort-block {
