@@ -467,6 +467,9 @@ img {
   position: absolute;
   border: none;
   right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .adult-amount {
@@ -500,12 +503,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 20px;
+  width: 20px;
   padding: 0;
   background-color: transparent;
   position: absolute;
   border: none;
   top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .button-minus {
@@ -513,7 +519,7 @@ img {
 }
 
 .button-plus {
-  right: 5px;
+  right: 10px;
 }
 
 .search-form-item:last-child {
@@ -558,6 +564,7 @@ img {
   font-weight: 700;
   border: none;
   padding: 16px 0;
+  cursor: pointer;
 }
 
 .button-find:hover {
@@ -694,7 +701,7 @@ img {
 .filter {
   display: flex;
   padding: 27px 72px;
-  padding-bottom: 14px;
+  padding-bottom: 30px;
   justify-content: flex-start;
 }
 
@@ -734,15 +741,25 @@ img {
   display: flex;
   align-items: center;
   font-weight: 400;
-  padding-left: 40px;
   margin-bottom: 23px;
  }
 
- .filter-option label {
-   position: relative;
-   display: block;
-   user-select: none;
+ .filter-option:last-child {
+  margin-bottom: 0;
  }
+
+
+ .filter-option label {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  padding-left: 40px;
+  user-select: none;
+ }
+
+.filter-option label:hover {
+  color: var(--grey-dark);
+}
 
 .filter-input-checkbox + label::before {
   content: "";
@@ -750,23 +767,32 @@ img {
   position: absolute;
   width: 23px;
   height: 23px;
-  left: -40px;
+  left: 0;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: left, center;
 }
 
 .filter-input-checkbox:checked + label::before {
   content: "";
   display: inline-block;
   position: absolute;
-  width: 23px;
+  width: 27px;
   height: 23px;
-  left: -40px;
+  left: 0px;
   background-image: url("../img/checkbox-on.svg");
+  background-position: left, center;
   background-repeat: no-repeat;
-  background-position: 0 0;
 }
+
+.filter-input-checkbox:disabled + label::before {
+  background-image: url("../img/checkbox-off-disabled.svg");
+}
+
+.filter-input-checkbox:checked:disabled + label::before {
+  background-image: url("../img/checkbox-on-disabled.svg");
+}
+
 
 .filter-item {
   margin: 0;
@@ -861,8 +887,7 @@ img {
 }
 
 .toggle:hover {
-  width: 23px;
-  height: 23px;
+  transform: scale(1.2);
 }
 
 .range-controls .toggle-max {
@@ -968,6 +993,10 @@ img {
   color: var(--blue);
 }
 
+.sort-by-order .active-arrow {
+  color: var(--blue);
+}
+
 /* Catalog */
 
 .catalog-list {
@@ -1030,8 +1059,28 @@ img {
 
 .rating {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+.rating::before {
+  content: "";
+  width: 91px;
+  height: 17px;
+  background-image: url("../img/star.svg");
+  background-position: right, center;
+  background-repeat: space;
+  margin-bottom: 47px;
+}
+
+.star-three::before {
+  width: 66px;
+}
+
+.star-two::before {
+  width: 42px;
 }
 
 .rating span {
