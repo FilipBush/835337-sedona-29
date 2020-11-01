@@ -64,10 +64,12 @@ img {
   width: 1px;
   height: 1px;
   margin: -1px;
-  padding: 0;
-  overflow: hidden;
   border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container {
@@ -83,11 +85,13 @@ img {
 }
 
 .page-body {
+  height: 100%;
   min-height: 100%;
 }
 
 .shadow-wrapper {
   width: 1200px;
+  height: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -154,6 +158,7 @@ img {
 /* Banner */
 
 .banner {
+  position: relative;
   background-image: url("../img/banner_background photo.jpg");
   background-color: var(--brown-dark-extra);
   background-repeat: no-repeat;
@@ -162,6 +167,17 @@ img {
   padding-top: 77px;
   padding-bottom: 82px;
   background-size: cover;
+}
+
+.banner::after {
+  content: "";
+  width: 1200px;
+  height: 57px;
+  position: absolute;
+  background-image: url("../img/banner-mask.svg");
+  bottom: 0;
+  left:0;
+  z-index: 2;
 }
 
 /* .banner-phrase {
@@ -456,6 +472,7 @@ img {
 .date-input::placeholder,
 .amount-input::placeholder {
   color: var(--basic-black);
+  opacity: 1;
   font-weight: 700;
   line-height: 26px;
   text-transform: uppercase;
@@ -550,7 +567,10 @@ img {
 }
 
 .amount-button:active,
-.calendar-icon:active {
+.amount-button:focus,
+.calendar-icon:active,
+.calendar-icon:focus {
+  outline: none;
   color: var(--blue);
 }
 
@@ -785,6 +805,10 @@ img {
   background-repeat: no-repeat;
 }
 
+.filter-input-checkbox:disabled + label {
+  color: var(--grey-light-extra);
+}
+
 .filter-input-checkbox:disabled + label::before {
   background-image: url("../img/checkbox-off-disabled.svg");
 }
@@ -792,6 +816,11 @@ img {
 .filter-input-checkbox:checked:disabled + label::before {
   background-image: url("../img/checkbox-on-disabled.svg");
 }
+
+.filter-input-checkbox:focus + label::before {
+  outline: 2px solid var(--blue);
+}
+
 
 
 .filter-item {
@@ -890,6 +919,10 @@ img {
   transform: scale(1.2);
 }
 
+.toggle:focus {
+  outline: 2px solid var(--blue);
+}
+
 .range-controls .toggle-max {
   left: 240px;
 }
@@ -909,6 +942,10 @@ img {
 .filter-button:hover {
   color: var(--basic-black);
   background-color: var(--basic-white);
+}
+
+.filter-button.button:focus {
+    outline: 2px solid var(--blue);
 }
 /* Sort by */
 
@@ -1058,6 +1095,7 @@ img {
 }
 
 .rating {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1066,7 +1104,10 @@ img {
 }
 
 .rating::before {
-  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  content:  "";
   width: 91px;
   height: 17px;
   background-image: url("../img/star.svg");
