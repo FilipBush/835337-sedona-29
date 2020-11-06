@@ -167,7 +167,7 @@ img {
 
 .banner {
   position: relative;
-  background-image: url("../img/banner-background-photo.jpg");
+  background-image: url("../img/background-banner.jpg");
   background-color: var(--brown-dark-extra);
   background-repeat: no-repeat;
   background-position: center;
@@ -182,7 +182,7 @@ img {
   width: 100%;
   height: 57px;
   position: absolute;
-  background-image: url("../img/banner-mask.svg");
+  background-image: url("../img/mask-banner.svg");
   bottom: -1px;
   left:0;
   z-index: 2;
@@ -333,15 +333,15 @@ img {
 }
 
 .feature-icon-house h3::before {
-  background-image: url("../img/feature-icon-1.svg");
+  background-image: url("../img/feature-1-icon.svg");
 }
 
 .feature-icon-burger h3::before {
-  background-image: url("../img/feature-icon-2.svg");
+  background-image: url("../img/feature-2-icon.svg");
 }
 
 .feature-icon-present h3::before {
-  background-image: url("../img/feature-icon-3.svg");
+  background-image: url("../img/feature-3-icon.svg");
 }
 
 .sub-features-item h3 {
@@ -361,7 +361,7 @@ img {
 }
 
 .feature-background-2 {
-  background-image: url("../img/feature_background_2.jpg");
+  background-image: url("../img/feature_back-2.jpg");
   background-repeat: no-repeat;
   width: 800px;
   height: 256px;
@@ -744,7 +744,7 @@ img {
  .filters {
   color: var(--basic-white);
   background-color: var(--brown);
-  background-image: url("../img/inner-page-background.jpg");
+  background-image: url("../img/inner-page-back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -817,7 +817,7 @@ img {
   width: 23px;
   height: 23px;
   left: 0;
-  background-image: url("../img/checkbox-off.svg");
+  background-image: url("../img/checkbox-status-off.svg");
   background-repeat: no-repeat;
   background-position: left, center;
 }
@@ -828,7 +828,7 @@ img {
   width: 27px;
   height: 23px;
   left: 0px;
-  background-image: url("../img/checkbox-on.svg");
+  background-image: url("../img/checkbox-status-on.svg");
   background-position: left, center;
   background-repeat: no-repeat;
 }
@@ -838,11 +838,11 @@ img {
 }
 
 .filter-input-checkbox:disabled + label::before {
-  background-image: url("../img/checkbox-off-disabled.svg");
+  background-image: url("../img/disabled-checkbox-off.svg");
 }
 
 .filter-input-checkbox:checked:disabled + label::before {
-  background-image: url("../img/checkbox-on-disabled.svg");
+  background-image: url("../img/disabled-checkbox-on.svg");
 }
 
 .filter-input-checkbox:focus + label::before {
