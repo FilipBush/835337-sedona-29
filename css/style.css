@@ -633,6 +633,7 @@ img {
 /* Main footer */
 
 .main-footer {
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items:center;
@@ -798,7 +799,6 @@ img {
   margin-bottom: 0;
  }
 
-
  .filter-option label {
   cursor: pointer;
   position: relative;
@@ -850,8 +850,6 @@ img {
 .filter-input-checkbox:focus + label::before {
   outline: 2px solid var(--blue);
 }
-
-
 
 .filter-item {
   margin: 0;
@@ -963,7 +961,7 @@ img {
 }
 
 .filter-button {
-  color: var(--baxic-white);
+  color: var(--basic-white);
   text-transform: uppercase;
   line-height: 21px;
   font-size: 14px;
@@ -1172,8 +1170,6 @@ img {
 .star-two::before {
   width: 42px;
 }
-
-
 
 .rating span {
   display: inline-flex;
