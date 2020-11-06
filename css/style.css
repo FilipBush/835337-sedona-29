@@ -428,13 +428,13 @@ img {
 .search-open-button {
   width: 568px;
   display: inline-block;
+  vertical-align: middle;
   padding: 30px;
   font-size: 21px;
   line-height: 26px;
   background-color: var(--brown);
   color: var(--basic-white);
   font-weight: 700;
-
 }
 
 .search-open-button:hover {
@@ -813,7 +813,6 @@ img {
 
 .filter-input-checkbox + label::before {
   content: "";
-  display: inline-block;
   position: absolute;
   width: 23px;
   height: 23px;
@@ -825,7 +824,6 @@ img {
 
 .filter-input-checkbox:checked + label::before {
   content: "";
-  display: inline-block;
   position: absolute;
   width: 27px;
   height: 23px;
