@@ -85,7 +85,6 @@ img {
 }
 
 .page-body {
-  height: 100%;
   min-height: 100%;
 }
 
@@ -1051,8 +1050,7 @@ img {
     border-bottom: 1px dotted transparent;
 }
 
-.sort-by-order a,
-.sort-by-order a:link {
+.sort-by-order a {
   color: var(--basic-black-alpha-03);
 }
 
