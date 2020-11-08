@@ -1038,6 +1038,7 @@ img {
 }
 
 .search-result-amount {
+  flex-shrink: 0;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
