@@ -228,6 +228,7 @@ img {
 }
 
 .main-features-item {
+  z-index: 2;
   grid-column: 1 / -1;
 }
 
@@ -401,6 +402,8 @@ img {
 /* Search */
 
 .search {
+  z-index: 3;
+  position: relative;
   text-align: center;
   padding-top: 58px;
   background-color: var(--basic-white);
@@ -421,6 +424,7 @@ img {
 }
 
 .search-open-button {
+  position: relative;
   width: 568px;
   display: inline-block;
   vertical-align: middle;
@@ -442,15 +446,19 @@ img {
 }
 
 .search-wrapper {
+  display: none;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  display: block;
   width: 568px;
   margin:0 auto;
   padding: 55px;
   padding-top: 54px;
   background-color: var(--basic-white);
+}
+
+.wrapper-display-block {
+  display: block;
 }
 
 .search-form {
@@ -1226,4 +1234,52 @@ img {
 .item-booking:active {
   background-color: var(--brown-dark);
   color: var(--basic-white-alpha-03);
+}
+
+
+/* Modal wibdow search */
+.search-show {
+  display: block;
+  animation: bounce 1s;
+  z-index: 1;
+}
+
+.modal-error {
+  animation: shake 1s;
+}
+
+/* Animation */
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -392px);
+    z-index: 1;
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+    z-index: 1;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(-50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(calc(-50% + 10px));
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(calc(-50% - 10px));
+  }
 }
