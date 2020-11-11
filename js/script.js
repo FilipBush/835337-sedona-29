@@ -11,7 +11,6 @@ searchPopup.classList.remove(".wrapper-display-block");
 searchButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   searchPopup.classList.toggle("search-show");
-  arrivalDate.focus();
   searchPopup.classList.remove("modal-error");
 });
 
